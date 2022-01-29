@@ -1,0 +1,98 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ToDoWebApp</name>
+    </assembly>
+    <members>
+        <member name="M:ToDoWebApp.Api.ToDoEntryController.GetByListId(System.String)">
+            <summary>
+            Get the list of entries contained in a toDo list.
+            </summary>
+            <param name="listId">toDo list id</param>
+            <returns>A list of entiries</returns>
+        </member>
+        <member name="M:ToDoWebApp.Api.ToDoEntryController.Get(System.String)">
+            <summary>
+            Get single entry.
+            </summary>
+            <param name="id">entry id</param>
+            <returns>Entry</returns>
+        </member>
+        <member name="M:ToDoWebApp.Api.ToDoEntryController.Save(ToDoWebApp.Dtos.ToDoEntryDto)">
+            <summary>
+            Create new Entry
+            </summary>
+            <remarks>TodoList is requeired. Content and Expiration Date are oprional, other attruibute are ignored</remarks>
+            <param name="entryDto">Entry</param>
+            <returns>The new created Entry</returns>
+        </member>
+        <member name="M:ToDoWebApp.Api.ToDoEntryController.Update(System.String,ToDoWebApp.Dtos.ToDoEntryDto)">
+            <summary>
+            Update Entry
+            </summary>
+            <remarks>Only Content and ExpirationDate can be updated</remarks>
+            <param name="id">Entry id to be updated</param>
+            <param name="entryDto">Entry updated content</param>
+            <returns>The updatet entry</returns>
+        </member>
+        <member name="M:ToDoWebApp.Api.ToDoEntryController.SetDone(System.String)">
+            <summary>
+            Done entry
+            </summary>
+            <remarks>Check entry as done</remarks>
+            <param name="id">Entry id</param>
+            <returns>The updated entry</returns>
+        </member>
+        <member name="M:ToDoWebApp.Api.ToDoEntryController.SetUndone(System.String)">
+            <summary>
+            Undone entry
+            </summary>
+            <remarks>Check entry as undone</remarks>
+            <param name="id">Entry id</param>
+            <returns>The updated entry</returns>
+        </member>
+        <member name="M:ToDoWebApp.Api.ToDoEntryController.Delete(System.String)">
+            <summary>
+            Delete entry
+            </summary>
+            <remarks>Delete an existing entry</remarks>
+            <param name="id">Entry id</param>
+        </member>
+        <member name="M:ToDoWebApp.Api.ToDoListController.GetAll">
+            <summary>
+            Get all toDo list
+            </summary>
+            <returns>List of toDo list</returns>
+        </member>
+        <member name="M:ToDoWebApp.Api.ToDoListController.Get(System.String)">
+            <summary>
+            Get todo list
+            </summary>
+            <param name="id">id of the toDo list</param>
+            <returns>toDo list</returns>
+        </member>
+        <member name="M:ToDoWebApp.Api.ToDoListController.Save(ToDoWebApp.Dtos.ToDoListDto)">
+            <summary>
+            Create new toDo list
+            </summary>
+            <remarks>Name attribute is optional. Other params is ignored</remarks>
+            <param name="listDto">toDo list</param>
+            <returns>New created toDo list</returns>
+        </member>
+        <member name="M:ToDoWebApp.Api.ToDoListController.Update(System.String,ToDoWebApp.Dtos.ToDoListDto)">
+            <summary>
+            Update toDo list
+            </summary>
+            <remarks>Only name can be updated.</remarks>
+            <param name="listDto">toDo list</param>
+            <returns>Updated toDo list</returns>
+        </member>
+        <member name="M:ToDoWebApp.Api.ToDoListController.Delete(System.String)">
+            <summary>
+            Delete toDo list
+            </summary>
+            <remarks>All the connected entries are deleted too</remarks>
+            <param name="id">Id of toDo list</param>
+        </member>
+    </members>
+</doc>
